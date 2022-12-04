@@ -9,9 +9,9 @@ We use 3 datasets in our work: Steam, Youshu, and NetEase.
 We include the preprocessed datasets in the repository: `data/{data_name}`.
 
 ## Backbone model
-We provide DAM, which is one of the state-of-the-art bundle recommendation model, as a backbone.
+We provide DAM, one of the state-of-the-art bundle recommendation models, as a backbone.
 It is defined in `models.py`.
-CrossCBR, which is another state-of-the-art model, is available at [https://github.com/mysbupt/CrossCBR](https://github.com/mysbupt/CrossCBR)
+CrossCBR, another state-of-the-art model, is available at [https://github.com/mysbupt/CrossCBR](https://github.com/mysbupt/CrossCBR)
 
 ## Running the code
 You can run the pretraining code by `python pretrain.py` with arguments `--epochs` and `--alpha`.
