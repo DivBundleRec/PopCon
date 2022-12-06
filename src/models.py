@@ -94,6 +94,7 @@ class Dam(nn.Module):
         self.vld_user_idx = vld_user_idx
         self.user_bundle_test = user_bundle_test
         self.user_bundle_test_mask = user_bundle_test_mask
+        self.bundle_freq = np.array(user_bundle_trn.sum(0)).squeeze().astype(float)
 
     def get_scores(self, u_idx, b_idx):
         """
