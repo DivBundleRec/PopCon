@@ -95,14 +95,6 @@ class Dam(nn.Module):
         self.user_bundle_test = user_bundle_test
         self.user_bundle_test_mask = user_bundle_test_mask
 
-        self.bundle_freq = np.array(user_bundle_trn.sum(0)).squeeze().astype(float)
-        self.item_freq = np.array(user_item.sum(0)).squeeze().astype(float)
-        bundle_freq_norm = self.bundle_freq / self.bundle_freq.sum()
-        uniform = np.ones_like(bundle_freq_norm)
-        uniform = uniform / uniform.sum()
-        balance = 0.1
-        self.bundle_prob = balance * bundle_freq_norm + (1-balance) * uniform
-
     def get_scores(self, u_idx, b_idx):
         """
         Get user-bundle scores
